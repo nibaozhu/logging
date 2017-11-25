@@ -3,6 +3,8 @@ CFLAGS=-fPIC
 
 .PHONY: all
 all: liblogging.so liblogging.a
+clean:
+	$(RM) *.o liblogging.a liblogging.so
 
 liblogging.so: logging.o
 	$(CC) -o $@ $^ -shared
